@@ -32,7 +32,7 @@ func Part1() {
 			if M[rowIndex][colIndex] != "@" {
 				continue
 			}
-			if checkSurround(M, rowIndex, colIndex) < 4 {
+			if CheckSurround(M, rowIndex, colIndex) < 4 {
 				// log.Println("found", rowIndex, colIndex)
 				count += 1
 			}
@@ -41,7 +41,7 @@ func Part1() {
 	log.Println("count", count)
 }
 
-func checkSurround(M [][]string, rowIndex int, colIndex int) int {
+func CheckSurround(M [][]string, rowIndex int, colIndex int) int {
 	if M[rowIndex][colIndex] != "@" {
 		return 0
 	}
